@@ -1,0 +1,360 @@
+@import url(https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@200&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@200&family=Bellefair&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@200;400;500&family=Bellefair&family=Poppins:wght@300;400;700&display=swap);
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+    color: #fff;
+}
+
+:root{
+    --nav-font:'Barlow Condensed', sans-serif;;
+    --nav_font-space: 'Bellefair', serif;
+    --nav-family: 'Barlow', sans-serif;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    color: #fff;
+    background-image: url(/images/crew/background-crew-desktop.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+
+/* ------------------------------------------------------------------------- */
+
+
+main{
+    width: 100vw;
+    height: 75%;
+    margin-top: 3rem;
+    /* background-color: red; */
+
+}
+section{
+    width: 100vw;
+    height: 75vh;
+    /* background-color: yellow; */
+    overflow:hidden;
+    margin-top: 2rem;
+}
+
+figure{
+    width: 100vw;
+    height: 100%;
+    text-align: left;   
+    margin-bottom: 30rem; 
+    display: grid;
+    grid-template-columns:  minmax(1rem, 1fr) minmax(0, 35rem) minmax(0, 35rem) minmax(1rem, 1fr);;
+    justify-content: center;
+    gap: 3vw;
+
+
+    grid-template-areas: 
+        '... no no ...'
+        '... pos pict ...'
+        '... lab pict ... '
+    ;
+
+
+}
+
+/* ------------------------------------------------------------------------- */
+
+
+.noop{
+    grid-area: no;
+}
+.lfcont{
+    grid-area: pos;
+}
+.label{
+    grid-area: lab;
+}
+.right{
+    grid-area: pict;
+}
+
+
+/* ------------------------------------------------------------------------- */
+
+
+.noop{
+    font-size: 32px;
+    font-weight: 400;
+    font-family: var(--nav-font);
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+}
+.noop span{
+    font-family: var(--nav-font);
+    font-weight: 900 !important;
+    color: gray;
+    margin-right: 1rem;
+    letter-spacing: 4.5px;
+
+}
+
+
+.lfcont{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+}
+
+.position{
+    color: rgba(255, 255, 255, 0.5);
+    font-family: var(--nav_font-space);
+    font-size: 32px;
+    text-transform: uppercase;
+
+}
+
+.name{
+    font-family: var(--nav_font-space);
+    font-size: 56px;
+    text-transform: uppercase;
+
+}
+.lfcont{
+    font-family: var(--nav-font);
+    font-size: 18px;
+    text-transform: capitalize;
+}
+
+.lfcont p{
+    font-family: var(--nav-family);
+    font-size: 17.5px;
+    text-transform: lowercase;
+    color: #ffffffe6;
+    line-height: 2rem;
+    letter-spacing: 1px;
+}
+
+p::first-letter{
+    text-transform: uppercase;
+
+}
+
+.label{
+    min-width: 200px;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.label a{
+    min-width: 20px !important;
+    height: 20px;
+    color: #ffffff00;
+    background-color: #ffffff4e;
+    border-radius: 50%;
+    margin-bottom: 250px;
+}
+
+#whitt{
+    background-color:  #fff !important;
+}
+
+/* ------------------------------------------------------------------------- */
+
+.right{
+    height: 100%;
+    width: 100%;
+    display: grid;
+    align-items: flex-end;
+    justify-content: center;
+
+}
+
+.right img{
+    max-width: 90%;
+    object-fit: contain;
+
+
+}
+
+    /* ------------------------------------------------------------------------- */
+    
+
+@media (max-width:750px){
+
+    body{
+        background-image: url(/images/crew/background-crew-tablet.jpg);
+    }
+
+    main{
+        margin-top: 1rem;
+    }
+
+    section{        
+        height: 910px;
+    }
+    
+    figure{
+        text-align: center;  
+        margin-top: 1.5rem;  
+        gap: 1rem;
+    
+        grid-template-columns:  0.9fr;
+        grid-template-rows: 40px minmax(200px,240px) 30px minmax(100px,700px);
+        place-content: center;
+        justify-items: center;
+
+        grid-template-areas: 
+        ' no '
+        ' pos '
+        ' lab '
+        ' pict'
+    ;
+    }
+    
+    /* ------------------------------------------------------------------------- */
+    
+    /*  left */
+    
+    .noop{
+        justify-self: start;
+
+    }
+    .noop span{
+        margin-right: 0.2rem;
+        letter-spacing: 3.5px;
+    }
+    
+
+    .position{
+    margin-top: 2rem;
+
+        font-size: 24px;
+        text-transform: uppercase;
+    
+    }
+    .name{
+        font-size: 40px;
+    }
+    .lfcont p{
+        font-size: 16px;
+        line-height: 1.5rem;
+    }
+
+    .label{
+        justify-content: center;
+    }
+    
+        
+    /* ------------------------------------------------------------------------- */
+    
+    /*  right */
+    /* ------------------------------------------------------------------------- */
+    
+    
+    .right{
+        max-width: 65%;
+        margin-top: 1.2rem;
+
+        /* display: grid; */
+    }
+    
+    
+    
+    .right img{
+        max-width: 100%;
+        
+        margin-bottom: 0.5rem;
+    } 
+
+
+}
+
+ /* ------------------------------------------------------------------------- */
+    
+    /*  media -- 2 */
+/* ------------------------------------------------------------------------- */
+
+
+@media (max-width:576px){
+
+    figure{
+        gap: 8vw;
+        align-content: start;
+
+        grid-template-rows: 40px minmax(250px,350px) 50px minmax(170px,210px)  ;
+
+        grid-template-areas: 
+        ' no '
+        ' pict'
+        ' lab '
+        ' pos '
+    ;
+    }
+
+    section{
+        height: 750px;
+    }
+
+/* ------------------------------------------------------------------------- */
+    
+/*  left */
+
+.noop{
+    justify-self: center;
+    font-size: 28px;
+    letter-spacing: 3px;
+}
+
+.position{
+    font-size: 16px;
+}
+
+.lfcont p{
+    font-size: 14px;
+
+    margin-bottom: 1rem;
+}
+
+
+
+.right{
+    width: 100%;
+    max-height: 100%;
+
+    justify-items: center;
+    align-items: end;
+    margin: 0 ;
+
+    overflow: hidden;
+
+}
+.right img{
+    max-height: 95%;
+    padding: 0 1rem;
+    object-fit: contain;
+    border-bottom: 1px solid rgb(80, 79, 79);
+
+}
+
+.label{
+    align-items: center;
+}
+
+.name{
+    font-size: 24px;
+}
+.p{
+    font-size: 15px;
+}
+
+}
